@@ -37,8 +37,10 @@ public class TestJobs2dPatterns {
 		application.addTest("Figure Joe 2", (e) -> FiguresJoe.figureScript2(DriverFeature.getDriverManager().getCurrentDriver()) );
 
 		SelectTestFigureWithComplexCommand test_rectangle = new SelectTestFigureWithComplexCommand(DriverCommandFactory.createRectangle(), DriverFeature.getDriverManager());
-
 		application.addTest("Rectangle", test_rectangle);
+
+		SelectTestFigureWithComplexCommand test_diamond = new SelectTestFigureWithComplexCommand(DriverCommandFactory.createDiamond(50, 20), DriverFeature.getDriverManager());
+		application.addTest("Diamond", test_diamond);
 	}
 
 	/**
